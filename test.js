@@ -1,2 +1,24 @@
-let a = 1.5 ; 
-console.log(Math.floor(a));
+// let a = "whatever" ; 
+// console.log(a.indexOf("e",5));
+
+// let b = 4 ; 
+// console.log(b.toString());
+
+// let c = "2, 3" ; 
+// console.log(c.charAt(0));
+
+// let c = { "what" : [1,2,3]};
+// c["what"].push(4);
+// console.log(c);
+
+// let c = { "what" : []};
+// c["what"].push(4);
+// console.log(c);
+
+// let c = {};
+// c["what"] = [];
+// c["what"].push(4);
+// console.log(c);
+
+let c= [4,3,5] ; 
+console.log(c[c.length-1]);
