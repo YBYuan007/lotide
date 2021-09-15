@@ -17,17 +17,8 @@ const letterPositions = function(sentence) {
   return results;
 };
 
-// logic: doesnt matter if it is the first time find this letter, need to +=  the index (string) as the value
-// if it is first time then += "index" then second time += " index"
 
 // return all the indices (zero-based positions) in the string where each character is found.
 
 letterPositions("hello");
 letterPositions("lighthouse in the house") 
-
-// str.charAt(str.length-1) 
-// lighthouse in the house
-
-// if (sentence[i] === /\s/g ){
-//   continue;
-// } else 
