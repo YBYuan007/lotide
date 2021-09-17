@@ -1,3 +1,34 @@
+
+const eqArrays = function(a, b) {
+  if (a.length !== b.length) {
+    return false; 
+  } else {
+    for (let i = 0 ; i < a.length; i ++ ){
+      if (a[i] !== b[i]){
+        return false; 
+        break; 
+      } else {
+        if (i === a.length-1) {
+          return true
+        } else {
+          continue;
+        }
+      }
+    }
+  }
+}
+
+
+const assertArraysEqual = function(actual, expected) {
+  console.log (actual, expected);
+  if (eqArrays(actual,expected)) {
+    console.log(`😃Assertion Passed: [${actual}] === [${expected}]`);
+  } else {
+    console.log(`😭Assertion Failed: [${actual}] !== [${expected}]`);
+  }
+};
+
+
 const takeUntil = function(array, callback) {
   // ...
   let result = [] ; 
@@ -22,7 +53,9 @@ const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Re
 const results2 = takeUntil(data2, x => x === ',');
 console.log(results2);
 
+assertArraysEqual(results1, [ 1, 2, 5, 7, 2 ]);
 
+assertArraysEqual(results2, [ 'I\'ve', 'been', 'to', 'Hollywood' ]);
 // [ 1, 2, 5, 7, 2 ]
 // ---
 // [ 'I\'ve', 'been', 'to', 'Hollywood' ]
