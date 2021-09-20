@@ -1,20 +1,39 @@
-const assertArraysEqual = function(a, b) {
-  if (a.length !== b.length) {
-    console.log("😭 two arrays dont have same number of length")
+
+// const eqArrays = function(a, b) {
+//   if (a.length !== b.length) {
+//     return false; 
+//   } else {
+//     for (let i = 0 ; i < a.length; i ++ ){
+//       if (a[i] !== b[i]){
+//         return false; 
+//         break; 
+//       } else {
+//         if (i === a.length-1) {
+//           return true
+//         } else {
+//           continue;
+//         }
+//       }
+//     }
+//   }
+// }
+
+const {eqArrays} = require("./eqArrays") ; 
+
+const assertArraysEqual = function(actual, expected) {
+  // console.log (actual, expected);
+  if (eqArrays(actual,expected)) {
+    console.log(`😃Assertion Passed: [${actual}] === [${expected}]`);
+    return `😃Assertion Passed: [${actual}] === [${expected}]`;
   } else {
-    for (let i = 0 ; i < a.length; i ++ ){
-      if (a[i] !== b[i]){
-        console.log("😭 elements in first array is different from elements in second array") 
-        break; 
-      } else {
-        if (i === a.length-1) {
-          console.log("😇 They are the same!!") 
-        } else {
-          continue;
-        }
-      }
-    }
+    console.log(`😭Assertion Failed: [${actual}] !== [${expected}]`);
+    return `😭Assertion Failed: [${actual}] !== [${expected}]`;
   }
-}
-const words = ["hello", "world", "lighthouse"];
-assertArraysEqual(words, ["hello", "world", "lighthouse"]);
+};
+
+module.exports = {assertArraysEqual ,eqArrays } ; 
+
+
+
+// const words = ["hello", "world", "lighthouse"];
+// assertArraysEqual(words, ["hello", "world", "lighthouse"]);
