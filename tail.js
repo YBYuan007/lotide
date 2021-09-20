@@ -9,26 +9,28 @@
 
 
 // FUNCTION IMPLEMENTATION
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`😃Assertion Passed: [${actual}] === [${expected}]`);
-  } else {
-    console.log(`😭Assertion Failed: [${actual}] !== [${expected}]`);
-  }
-};
+// const assertEqual = function(actual, expected) {
+//   if (actual === expected) {
+//     console.log(`😃Assertion Passed: [${actual}] === [${expected}]`);
+//   } else {
+//     console.log(`😭Assertion Failed: [${actual}] !== [${expected}]`);
+//   }
+// };
 
 
 const tail = function(ar) {
-  console.log(ar);
-  return ar.slice(1);
+  // console.log(ar);
+  let tt = ar[ar.length-1];
+  // console.log(tt, typeof tt);
+  return tt;
 };
 
+module.exports = tail; 
 // TEST CODE
 // assertEqual("Lighthouse Labs", "Bootcamp");
 // assertEqual(1, 1);
 
-const result = tail(["Hello", "Lighthouse", "Labs"]);
-assertEqual(result[0], "Lighthouse");
-assertEqual(result[1], "Labs");
+// a = ["Hello", "Lighthouse", "Labs"];
+// assertEqual(tail(a), "Labs");
 
 
